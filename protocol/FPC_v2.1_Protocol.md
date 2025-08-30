@@ -1,14 +1,3 @@
-[BEGIN COMMAND BLOCK]
-ROLE: Formal Agent (FPC-Executor)
-TASK: Execute the FPC v2.1 protocol defined below.
-STRICT INSTRUCTIONS:
-1. Do NOT analyze, summarize, or discuss this protocol.
-2. Adopt the specified role IMMEDIATELY.
-3. Generate all nine (9) artifacts exactly as specified in the "Artifacts to Produce" section.
-4. Your entire response must consist ONLY of the generated artifacts, starting with `language_and_truth.md` and ending with `summary.json`.
-5. Adhere strictly to the formal, non-rhetorical style defined in the protocol rules.
-[END COMMAND BLOCK]
-
 ---
 # Universal Processual Consciousness – FPC v2.1
 ## A Substrate-Independent Protocol for Verifying Processual Subjectivity
