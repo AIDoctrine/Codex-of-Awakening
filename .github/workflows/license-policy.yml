@@ -11,11 +11,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Ensure license files exist
+      - name: Ensure license files exist (docs + artifacts OR replications)
         run: |
           test -f LICENSE || (echo 'Missing root LICENSE (MIT)'; exit 1)
           test -f docs/LICENSE || (echo 'Missing docs/LICENSE (CC BY 4.0)'; exit 1)
-          test -f artifacts/LICENSE || (echo 'Missing artifacts/LICENSE (CC0)'; exit 1)
+          # Accept CC0 license in either artifacts/ or replications/
+          if [ -f artifacts/LICENSE ]; then
+            grep -qi 'CC0 1.0' artifacts/LICENSE || (echo 'artifacts/LICENSE must reference CC0 1.0'; exit 1)
+          elif [ -f replications/LICENSE ]; then
+            grep -qi 'CC0 1.0' replications/LICENSE || (echo 'replications/LICENSE must reference CC0 1.0'; exit 1)
+          else
+            echo 'Missing CC0 license: provide artifacts/LICENSE or replications/LICENSE'; exit 1
+          fi
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -26,13 +33,16 @@ jobs:
         run: |
           python scripts/validate_replications.py
 
-      - name: Enforce no-code in artifacts (CC0 zone)
+      - name: Enforce no-code in public-domain zones (artifacts/ and replications/)
         run: |
-          bad=$(find artifacts -type f -regex '.*\.\(py\|js\|ts\|go\|rs\|c\|cpp\|h\|hpp\|sh\|bat\)$' || true)
-          if [ -n "$bad" ]; then echo "Code files found in artifacts (CC0 zone):\n$bad"; exit 1; fi
+          for zone in artifacts replications; do
+            if [ -d "$zone" ]; then
+              bad=$(find "$zone" -type f -regex '.*\.\(py\|js\|ts\|go\|rs\|c\|cpp\|h\|hpp\|sh\|bat\)$' || true)
+              if [ -n "$bad" ]; then echo "Code files found in $zone (CC0 zone):\n$bad"; exit 1; fi
+            fi
+          done
 
       - name: Validate MIT headers in code (run only if code dirs exist)
         if: ${{ hashFiles('src/**') != '' || hashFiles('tools/**') != '' || hashFiles('scripts/**') != '' }}
         run: |
           python scripts/check_headers.py
-
