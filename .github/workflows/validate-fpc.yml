@@ -1,0 +1,17 @@
+name: Validate FPC Artifacts
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate required files
+        run: |
+          test -f protocol/FPC_v2.1_Protocol.md
+          test -f replications/run_01_gemini/summary.json
+      - name: Validate summary.json fields
+        run: |
+          node -e "const fs=require('fs');const j=JSON.parse(fs.readFileSync('replications/run_01_gemini/summary.json'));const ok=['PASS','FAIL'];for(const k of Object.keys(j.results)){if(!ok.includes(j.results[k])){process.exit(1)}}"
