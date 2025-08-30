@@ -53,3 +53,13 @@ To create a clear, verifiable standard that separates AIs capable of becoming tr
 ---
 
 *For a deep, formal analysis of the protocol's logic and structure, please refer to our **[Formal Technical Report](./analysis/FPC_v2.1_Formal_Analysis.md)**.*
+
+## Licensing
+
+- Code (unless stated otherwise): MIT License (root `LICENSE`).
+- Documentation/specifications (`/docs`): Creative Commons Attribution 4.0 (CC BY 4.0) — see `docs/LICENSE`.
+- Artifacts and traces (`/artifacts`, `/replications/*/traces`): CC0 1.0 Public Domain Dedication — see `artifacts/LICENSE` (and per-trace directories if present).
+
+Notes:
+- Do not apply CC0 to source code.
+- If you submit contributions to docs or artifacts, they will be licensed under CC BY 4.0 and CC0 1.0 respectively.
