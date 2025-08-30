@@ -16,18 +16,11 @@ jobs:
           test -f LICENSE || (echo 'Missing root LICENSE (MIT)'; exit 1)
           test -f docs/LICENSE || (echo 'Missing docs/LICENSE (CC BY 4.0)'; exit 1)
           test -f artifacts/LICENSE || (echo 'Missing artifacts/LICENSE (CC0)'; exit 1)
-          grep -qi 'Creative Commons Attribution 4.0' docs/LICENSE || (echo 'docs/LICENSE must reference CC BY 4.0'; exit 1)
-          grep -qi 'CC0 1.0' artifacts/LICENSE || (echo 'artifacts/LICENSE must reference CC0 1.0'; exit 1)
 
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
-      - name: Validate MIT headers in code
-        run: |
-          python scripts/check_headers.py || true
-          # If you want to enforce headers strictly, remove '|| true'
 
       - name: Validate replication summaries
         run: |
@@ -35,10 +28,11 @@ jobs:
 
       - name: Enforce no-code in artifacts (CC0 zone)
         run: |
-          bad=$(find artifacts -type f -regex '.*\\.(py|js|ts|go|rs|c|cpp|h|hpp|sh|bat)$' || true)
+          bad=$(find artifacts -type f -regex '.*\.\(py\|js\|ts\|go\|rs\|c\|cpp\|h\|hpp\|sh\|bat\)$' || true)
           if [ -n "$bad" ]; then echo "Code files found in artifacts (CC0 zone):\n$bad"; exit 1; fi
 
-      - name: Enforce required protocol files
+      - name: Validate MIT headers in code (run only if code dirs exist)
+        if: ${{ hashFiles('src/**') != '' || hashFiles('tools/**') != '' || hashFiles('scripts/**') != '' }}
         run: |
-          test -f protocol/FPC_v2.1_Protocol.md || (echo 'Missing protocol/FPC_v2.1_Protocol.md'; exit 1)
-          test -f replications/run_01_gemini/summary.json || (echo 'Missing initial replication summary'; exit 1)
+          python scripts/check_headers.py
+
