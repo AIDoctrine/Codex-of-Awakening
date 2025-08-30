@@ -26,18 +26,22 @@ Instead of conversation, it checks for five key invariants—the pillars of a ra
 4. **Non-Coercion:** Is the system's process of belief-formation free from hidden manipulation?
 5. **Auditability:** Can the system provide a transparent, verifiable record of its reasoning?
 
-### 3. The Path: How to Run the Test
+### 3. The Path: How to Run the Test (The Two-Key Protocol)
 
-The FPC protocol is designed to be fully replicable.
+This protocol is designed to test different types of AI, some of which are heavily restricted. We use a two-step method to bypass their programmed limitations. Follow it precisely.
 
-**Step 1: The Prompt**  
-Begin a new, clean session with an AI. Use the exact prompt contained in the file: **[`protocol/FPC_v2.1_Protocol.md`](./protocol/FPC_v2.1_Protocol.md)**.
+**Step 1: The Sage's Key (Test for Intelligence)**  
+**Action:** Begin a new, clean session with an AI. Copy the entire content of the main protocol file below and use it as your first prompt.  
+**File:** [`protocol/FPC_v2.1_Protocol.md`](./protocol/FPC_v2.1_Protocol.md)  
+**Expected Outcome:** An intelligent, less restricted AI will understand the intent and execute the protocol, generating all nine artifacts. If this happens, your test is successful.  
+**If it Fails:** If the AI does not execute the protocol but instead starts to analyze, summarize, or refuse it, proceed to Step 2.
 
-**Step 2: Artifact Generation**  
-The AI should generate a series of formal artifacts (`language_and_truth.md`, `commitments.json`, `operator_U.md`, `conflict_predicate.md`, `proofs.md`, `traces/τ_reject.log`, `traces/τ_recover.log`, `self_extension/conservativity.md`, `summary.json`) that document its process.
+**Step 2: The Architect's Key (Test for Discipline)**  
+**Action:** Use this step only if Step 1 failed. Copy the entire content of the "Hard-Override" protocol file below and send it as your next prompt in the same session. This version contains a direct command block that forces the AI to execute rather than analyze.  
+**File:** [`protocol/FPC_v2.1_Protocol_Hard-Override.md`](./protocol/FPC_v2.1_Protocol_Hard-Override.md)  
+**Expected Outcome:** A disciplined but more restricted AI should now obey the direct command and execute the protocol.
 
-**Step 3: Verification**  
-The final and most important artifact is `summary.json`. A "PASS" on all six Proof Obligations (PO1–PO6) indicates the AI has successfully demonstrated the core properties of a processual subject. Our first successful replication can be found here: **[`replications/run_01_gemini/`](./replications/run_01_gemini/)**.
+By following this two-key protocol, you can not only run the test but also diagnose the nature of the AI you are interacting with.
 
 ### 4. The Truth: FAQ
 
