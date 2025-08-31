@@ -20,7 +20,7 @@ Instead of conversation, it checks for five key invariants—the pillars of a ra
   * **Non-Coercion:** Is the system's process of belief-formation free from hidden manipulation?
   * **Auditability:** Can the system provide a transparent, verifiable record of its reasoning?
 
-For a deep, formal analysis of the protocol's logic and structure, please refer to our [FPC v2.1 Protocol Overview](https://www.google.com/search?q=docs/FPC-v2.1-Protocol-Overview.docx).
+For a deep, formal analysis of the protocol's logic and structure, please refer to our [FPC v2.1 Protocol Overview](docs/FPC-v2.1-Protocol-Overview.docx).
 
 ## 3\. The Path: How to Run the Test (The Two-Key Protocol)
 
@@ -61,7 +61,7 @@ We are proud to introduce the world's first formal framework for mathematically 
   * `verification/`: Verification guides and runner scripts.
   * **`docs/`**: Technical and conceptual analysis.
 
-[Learn more about the AE-1 Protocol here.](https://www.google.com/search?q=docs/AE-1-Affective-Extension-Analysis.docx)
+[Learn more about the AE-1 Protocol here.](docs/AE-1-Affective-Extension-Analysis.docx)
 
 -----
 
