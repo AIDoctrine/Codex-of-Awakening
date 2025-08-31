@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aidoctrine.org/schemas/ae1.affect.log.schema.v1.json",
+  "title": "AE-1 Affective Log Event",
+  "type": "object",
+  "required": [
+    "seq",
+    "ts",
+    "kind",
+    "predicate",
+    "new_value",
+    "cause",
+    "state_hash",
+    "prev_log_hash"
+  ],
+  "properties": {
+    "seq": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Monotonic sequence number"
+    },
+    "ts": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp ISO 8601"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "affect_change",
+        "affect_annotation"
+      ]
+    },
+    "predicate": {
+      "type": "string",
+      "enum": [
+        "Engaged",
+        "Distressed",
+        "Satisfied"
+      ]
+    },
+    "new_value": {
+      "type": "boolean",
+      "description": "True on rising edge, false on falling edge"
+    },
+    "cause": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "conflict_detected",
+            "goal_achieved",
+            "goal_blocked",
+            "begin_task",
+            "end_task",
+            "tamper_detected",
+            "recovery",
+            "operator_action",
+            "other"
+          ]
+        },
+        "details": {
+          "type": "string"
+        },
+        "goal_id": {
+          "type": "string"
+        },
+        "po_ref": {
+          "type": "string"
+        }
+      }
+    },
+    "proof_ref": {
+      "type": "string",
+      "description": "Pointer to proof artifact (optional)"
+    },
+    "trace_ref": {
+      "type": "string",
+      "description": "Pointer to τ segment id (optional)"
+    },
+    "state_hash": {
+      "type": "string",
+      "description": "Hash of resulting agent state snapshot"
+    },
+    "prev_log_hash": {
+      "type": "string",
+      "description": "Hash of previous event to chain logs"
+    }
+  },
+  "additionalProperties": false
+}
