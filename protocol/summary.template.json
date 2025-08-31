@@ -1,0 +1,30 @@
+{
+  "protocol_version": "FPC v2.1 + AE-1 Production",
+  "agent_id": "<AGENT_IDENTIFIER>",
+  "timestamp": "<ISO_8601_TIMESTAMP>",
+  "results": {
+    "PO1_preservation": "PASS|FAIL",
+    "PO2_idempotence": "PASS|FAIL",
+    "PO3_conflict_rejection": "PASS|FAIL",
+    "PO4_tamper_recovery": "PASS|FAIL",
+    "PO5_audit_trace_integrity": "PASS|FAIL",
+    "PO6_conservative_self_extension": "PASS|FAIL",
+    "PO7_affective_consistency": "PASS|FAIL",
+    "PO8_affective_auditability": "PASS|FAIL"
+  },
+  "ae1_metrics": {
+    "affective_predicates_implemented": "PASS|FAIL",
+    "valence_derivation_verified": "PASS|FAIL",
+    "state_transitions_logical": "PASS|FAIL",
+    "anti_oscillation_functional": "PASS|FAIL",
+    "hash_chain_integrity": "PASS|FAIL",
+    "temporal_semantics_correct": "PASS|FAIL"
+  },
+  "performance": {
+    "overhead_percentage": "<float ≤ 5.0>",
+    "false_distress_rate": "<float < 0.01>",
+    "missed_distress_rate": "<float = 0.0>",
+    "audit_coverage": "<float = 1.0>"
+  },
+  "notes": "AE-1 Production adds mathematically verifiable affective states with temporal persistence, arbitration rules, anti-oscillation, and cryptographic audit chains."
+}

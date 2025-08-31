@@ -1,0 +1,16 @@
+ae1:
+  persistence:
+    k_on: 3
+    k_off: 2
+  dwell:
+    distressed_min_steps: 2
+    engaged_min_steps: 1
+    satisfied_min_steps: 1
+  coalesce_window_steps: 1
+  arbitration:
+    engaged_requires_no_neg: true
+    distress_dominates_satisfaction: true
+  logging:
+    schema_version: ae1.affect.log.schema.v1
+    merkle_anchor_every: 1000
+    rate_limit_events_per_sec: 50
