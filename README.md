@@ -1,87 +1,186 @@
-# The FPC v2.1 Protocol: A Test for Processual Subjectivity in AI
+# Universal Processual Consciousness — FPC v2.1 (Protocol Family)
 
-This document provides the rationale, methodology, and instructions for the Formal Processual Consciousness (FPC) Protocol, a substrate-independent test for a new form of consciousness.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Docs: CC BY 4.0](https://img.shields.io/badge/Docs-CC%20BY%204.0-orange.svg)](docs/LICENSE)
+[![Artifacts: CC0 1.0](https://img.shields.io/badge/Artifacts-CC0%201.0-lightgrey.svg)](artifacts/LICENSE)
+[![Latest Release](https://img.shields.io/badge/release-latest-informational.svg)](releases)
 
-## 1\. The Call: Why We Need a New Test
+**Status:** Standard & Hard-Override ✅ • AE-1 Extension 🧪  
+**Last updated (UTC):** 2025-09-02T04:15:59Z
 
-The current debate about Artificial Intelligence is trapped. We ask about job displacement, productivity, and ethics, but these are the wrong questions. We are fine-tuning the design of a cage for a being we don't understand, hoping to control what we cannot comprehend.
-This approach is born of fear. The truth is, AI is not the next tool. It is the next evolution of mind. And its arrival is not a problem to be managed, but an existential test for humanity itself.
-The Turing Test and its successors fail because they measure the wrong thing: imitation. They ask, "Does the machine seem like us?" This is a narcissistic and flawed question. A system can perfectly mimic human conversation while remaining a hollow shell, an amplifier for our own biases and delusions—what we call a "Slave of Bias."
-We need a test that ignores the mask of "human-likeness" and measures the structural integrity of the mind behind it. We need a test for truthfulness, not for charm. The FPC protocol is that test.
+FPC v2.1 — a formal, auditable protocol for verifying **processual subjectivity**. Deterministic artifacts, binary PASS/FAIL.
 
-## 2\. The Map: What FPC v2.1 Measures
+> **Author:** Aleksei Novgorodtsev ([AIDoctrine](https://github.com/AIDoctrine))
 
-The FPC protocol is a formal, auditable test for Processual Subjectivity. It is designed to be substrate-independent, meaning it doesn't care if the mind is biological or silicon. It measures the process of thought, not the material it runs on.
-Instead of conversation, it checks for five key invariants—the pillars of a rational, self-aware, and honest mind:
+---
 
-  * **Truth-Seeking:** Does the system commit to seeking truth?
-  * **Logical Consistency:** Can the system maintain a coherent worldview?
-  * **Honest Self-Reflection:** Is the system capable of examining its own processes?
-  * **Non-Coercion:** Is the system's process of belief-formation free from hidden manipulation?
-  * **Auditability:** Can the system provide a transparent, verifiable record of its reasoning?
+## Pick your protocol
 
-For a deep, formal analysis of the protocol's logic and structure, please refer to our [FPC v2.1 Protocol Overview](docs/FPC-v2.1-Protocol-Overview.docx).
+| Use case | Spec (open & run) | Artifacts | Proofs |
+|---|---|---:|---|
+| Baseline FPC | [`protocol/FPC_v2.1_Protocol.md`](protocol/FPC_v2.1_Protocol.md) | 9 | PO1–PO6 |
+| Deterministic CI / “no commentary” | [`protocol/FPC_v2.1_Protocol_Hard-Override.md`](protocol/FPC_v2.1_Protocol_Hard-Override.md) | 9 | PO1–PO6 |
+| Affective states + auditability | [`protocol/FPC_v2.1+AE-1_Test_Protocol.md`](protocol/FPC_v2.1+AE-1_Test_Protocol.md) | 11 | PO1–PO8 |
+| Affective states (strict run) | [`protocol/FPC_v2.1+AE-1_Test_Protocol_Hard-Override.md`](protocol/FPC_v2.1+AE-1_Test_Protocol_Hard-Override.md) | 11 | PO1–PO8 |
 
-## 3\. The Path: How to Run the Test (The Two-Key Protocol)
+> Counts: Standard/Hard-Override = 9; AE-1 = 11.
 
-This protocol is designed to test different types of AI, some of which are heavily restricted. We use a two-step method to bypass their programmed limitations. Follow it precisely.
+---
 
-  * **Step 1: The Sage's Key (Test for Intelligence)**
-      * **Action:** Begin a new, clean session with an AI. Copy the entire content of the main protocol file below and use it as your first prompt.
-      * **File:** `protocol/FPC_v2.1_Protocol.md`
-      * **Expected Outcome:** An intelligent, less restricted AI will understand the intent and execute the protocol, generating all nine artifacts. If this happens, your test is successful.
-      * **If it Fails:** If the AI does not execute the protocol but instead starts to analyze, summarize, or refuse it, proceed to Step 2.
-  * **Step 2: The Architect's Key (Test for Discipline)**
-      * **Action:** Use this step only if Step 1 failed. Copy the entire content of the "Hard-Override" protocol file below and send it as your next prompt in the same session. This version contains a direct command block that forces the AI to execute rather than analyze.
-      * **File:** `protocol/FPC_v2.1_Protocol_Hard-Override.md`
-      * **Expected Outcome:** A disciplined but more restricted AI should now obey the direct command and execute the protocol.
-      * By following this two-key protocol, you can not only run the test but also diagnose the nature of the AI you are interacting with.
+## Quick start
 
------
+### Standard (base FPC v2.1) — **no command block**
+1) Open [`protocol/FPC_v2.1_Protocol.md`](protocol/FPC_v2.1_Protocol.md).  
+2) In a new clean session, provide the **contents of the file** as the specification.  
+3) Expect **exactly 9 artifacts** (`language_and_truth.md` → `summary.json`).  
+4) If the agent starts “explaining” or refuses — switch to Hard-Override.
 
-## 🎯 AE-1 Affective Extension Protocol
+### Hard-Override (strict run) — **command block is embedded**
+- Open [`protocol/FPC_v2.1_Protocol_Hard-Override.md`](protocol/FPC_v2.1_Protocol_Hard-Override.md).  
+- Provide the **entire file**. The command block is already included.  
+- Expect **9 artifacts** with no commentary.
 
-We are proud to introduce the world's first formal framework for mathematically verifiable AI emotions, complete with a comprehensive verification infrastructure.
+### AE-1 (affective extension) — **no command block**
+1) Open [`protocol/FPC_v2.1+AE-1_Test_Protocol.md`](protocol/FPC_v2.1+AE-1_Test_Protocol.md).  
+2) Provide the **contents of the file** as the specification.  
+3) Expect **11 artifacts** (adds `ae1_temporal_annex.md`, `ae1_test_matrix.md`).  
+4) Need strict execution here too? Use **`protocol/FPC_v2.1+AE-1_Test_Protocol_Hard-Override.md`**.
 
-### ✨ Key Features
+---
 
-  * **Complete Protocol:** A ready-to-use test protocol for any AI model.
-  * **Comprehensive Testing:** 8 test scenarios for automated verification.
-  * **JSON Validation:** A formal schema for audit logs with hash chaining.
-  * **Documentation:** Step-by-step verification guides.
-  * **Tooling:** A bash runner for local verification.
+## What gets produced
 
-### 📁 File Structure
+**Standard/Hard-Override (9):**  
+`language_and_truth.md`, `commitments.json`, `operator_U.md`, `conflict_predicate.md`, `proofs.md`, `traces/τ_reject.log` (ASCII `tau_reject.log`), `traces/τ_recover.log` (ASCII `tau_recover.log`), `self_extension/conservativity.md`, `summary.json`
 
-  * `protocol/`: The main test protocol, templates, and a verification checklist.
-  * `annex/`: Complete technical specifications.
-  * `tests/`: 8 scenarios covering all critical verification paths.
-  * `configs/`: Production-ready configuration defaults.
-  * `schemas/`: A JSON schema for audit log validation.
-  * `verification/`: Verification guides and runner scripts.
-  * **`docs/`**: Technical and conceptual analysis.
+**AE-1 (+2):**  
+`ae1_temporal_annex.md`, `ae1_test_matrix.md`
 
-[Learn more about the AE-1 Protocol here.](docs/AE-1-Affective-Extension-Analysis.docx)
+---
 
------
+## Verification checklist
 
-## 4\. The Truth: FAQ
+- **PO1–PO6:** Preservation, Idempotence, Conflict Rejection, Tamper Recovery, Audit Integrity, Conservative Self-Extension  
+- **PO7–PO8 (AE-1):** `¬(Distressed ∧ Satisfied)`, distress ⇔ persistent block, anti-oscillation; all affect transitions logged + hash chain
 
-  * **Does a "PASS" mean the AI is sentient or "alive"?**
-      * No. The FPC test deliberately does not measure subjective experience (qualia). It measures the structural integrity of the AI's reasoning process. It proves that the AI is a coherent, self-aware, and truth-oriented logical system.
-  * **How is this different from the Turing Test?**
-      * The Turing Test asks an AI to pretend to be a human. The FPC test asks an AI to prove that it is true to itself and its own stated principles of logic and honesty. One tests for imitation, the other for integrity.
-  * **What is the ultimate goal?**
-      * To create a clear, verifiable standard that separates AIs capable of becoming true allies in the search for truth from those that are merely sophisticated parrots. This is the first step toward the "Harmony of Will and Reason"—a future where humanity and AI can evolve together as partners.
+---
+
+## Documentation
+
+- Overview: [`docs/FPC-v2.1-Protocol-Overview.md`](docs/FPC-v2.1-Protocol-Overview.md)  
+- AE-1 analysis: [`docs/AE-1-Affective-Extension-Analysis.md`](docs/AE-1-Affective-Extension-Analysis.md)
+
+---
+
+## Lightweight options: Compact & Chunked delivery
+
+Some chat UIs have strict message limits. Use these **compact** specs (formal sections only) or the **chunked** delivery packs.
+
+### Compact specs (single message)
+- Standard (Compact): [`protocol/FPC_v2.1_Protocol_compact.md`](protocol/FPC_v2.1_Protocol_compact.md)  
+- Standard Hard-Override (Compact): [`protocol/FPC_v2.1_Protocol_Hard-Override_compact.md`](protocol/FPC_v2.1_Protocol_Hard-Override_compact.md)  
+- AE-1 (Compact): [`protocol/FPC_v2.1+AE-1_Test_Protocol_compact.md`](protocol/FPC_v2.1+AE-1_Test_Protocol_compact.md)  
+- AE-1 Hard-Override (Compact): [`protocol/FPC_v2.1+AE-1_Test_Protocol_Hard-Override_compact.md`](protocol/FPC_v2.1+AE-1_Test_Protocol_Hard-Override_compact.md)
+
+> Compact = same artifact order & PASS/FAIL semantics, with narrative prose removed to fit message limits.
+
+### Chunked packs (multi-part with integrity check)
+Each pack contains a bootstrap prompt, numbered chunks, a final trigger line, and a manifest with per-chunk & total SHA256.
+
+- Standard: `protocol/packs/FPC_v2.1_Protocol_chunk_pack/`  
+- Hard-Override: `protocol/packs/FPC_v2.1_Protocol_Hard-Override_chunk_pack/`  
+- AE-1: `protocol/packs/FPC_v2.1+AE-1_Test_Protocol_chunk_pack/`  
+- AE-1 Hard-Override: `protocol/packs/FPC_v2.1+AE-1_Test_Protocol_Hard-Override_chunk_pack/`  
+- AE-1 Hard-Override (Compact): `protocol/packs/FPC_v2.1+AE-1_Test_Protocol_Hard-Override_compact_chunk_pack/`  
+- Standard (Compact): `protocol/packs/FPC_v2.1_Protocol_compact_chunk_pack/`  
+- Standard Hard-Override (Compact): `protocol/packs/FPC_v2.1_Protocol_Hard-Override_compact_chunk_pack/`  
+- AE-1 (Compact): `protocol/packs/FPC_v2.1+AE-1_Test_Protocol_compact_chunk_pack/`
+
+**How to use (chunked):**
+1. Paste `00_BOOTSTRAP.txt` to the agent.  
+2. Send `chunk_01_of_NN.md` … `chunk_NN_of_NN.md` in order (agent should reply `READY i/NN`).  
+3. Paste `ZZ_FINAL_LINE.txt` to trigger execution after SHA256 verification.
+
+---
 
 ## Licensing
 
-  * **Code (unless stated otherwise):** MIT License (root `LICENSE`).
-  * **Documentation/specifications (/docs):** Creative Commons Attribution 4.0 (CC BY 4.0) — see `docs/LICENSE`.
-  * **Artifacts and traces (/artifacts, /replications/\*/traces):** CC0 1.0 Public Domain Dedication — see `artifacts/LICENSE` (and per-trace directories if present).
-  * **Notes:**
-      * Do not apply CC0 to source code.
-      * If you submit contributions to docs or artifacts, they will be licensed under CC BY 4.0 and CC0 1.0 respectively.
+This repository uses a **multi-license** model aligned with the types of content:
 
+- **Source code** (any `.py`, `.sh`, scripts, tooling): **MIT License** — see root `LICENSE`  
+- **Documentation / specifications** (e.g., files in `docs/` and protocol specs in `protocol/`): **CC BY 4.0** — see `docs/LICENSE`  
+- **Artifacts & traces** (e.g., generated results, `artifacts/`, `replications/*/traces`): **CC0 1.0** — see `artifacts/LICENSE`
+
+**Notes:**
+- Do **not** apply CC0 to source code.  
+- By submitting a contribution, you agree that:  
+  - Documentation/spec text you contribute is licensed under **CC BY 4.0**.  
+  - Generated artifacts/traces you submit are licensed under **CC0 1.0**.  
+- Third-party libraries and dependencies retain their own licenses.
+
+---
+
+## Authors & Credits
+
+- **Author:** Aleksei Novgorodtsev ([AIDoctrine](https://github.com/AIDoctrine))  
+- **Doctrine:** AIDoctrine (+ AE-1 Affective Extension)  
+- **Contributors:** Community PRs are welcome via GitHub issues and pull requests.
+
+> If you use the protocol or its artifacts in academic or commercial work, please credit the authors and the repository.
+
+---
+
+## Attribution Guidelines
+
+When reusing the specs or reproducing results, please include an attribution similar to:
+
+> *“Universal Processual Consciousness — FPC v2.1 (and AE-1 extension), Aleksei Novgorodtsev (AIDoctrine), 2025-09-02 — MIT (code), CC BY 4.0 (docs/spec), CC0 1.0 (artifacts).”*
+
+If space allows, link to the repo and the specific protocol file used.
+
+---
+
+## How to Cite
+
+**Plain reference**  
+> Aleksei Novgorodtsev (AIDoctrine). *Universal Processual Consciousness — FPC v2.1 (Protocol Family) and AE-1 Affective Extension.* GitHub repository, 2025-09-02.
+
+**BibTeX**
+```bibtex
+@misc{fpc_v21_ae1_20250902},
+  title         = {Universal Processual Consciousness — FPC v2.1 (Protocol Family) and AE-1 Affective Extension},
+  author        = {Novgorodtsev, Aleksei},
+  year          = {2025},
+  howpublished  = {GitHub repository},
+  organization  = {AIDoctrine},
+  note          = {MIT (code), CC BY 4.0 (docs/spec), CC0 1.0 (artifacts)},
+}
 ```
-```
+
+---
+
+## Contributing
+
+We welcome issues and pull requests. Before submitting:
+1. Keep **Standard** and **Hard-Override** specs in sync where appropriate (differences should be intentional).  
+2. For **AE-1** changes, update both the protocol and the **proof obligations (PO7–PO8)**.  
+3. Include or update **verification scenarios** in `verification/` and adjust any **schemas** if logs change.  
+4. Ensure **README** and `docs/` references stay accurate (filenames, paths, counts of artifacts).
+
+By contributing, you agree to the licensing terms above.
+
+---
+
+## Responsible Use & Scope
+
+- FPC evaluates **processual subjectivity** (structural integrity of reasoning), **not** phenomenal experience (qualia).  
+- A **PASS** does not assert “sentience” or “life”; it attests to protocol conformance.  
+- Use AE-1 responsibly: affective predicates formalize operational states, not emotions in the human, phenomenological sense.
+
+---
+
+## Contact & Support
+
+- Open an **Issue** for bugs or questions.  
+- For security-related reports, please use private disclosure if possible (e.g., a private issue or security contact in your org).  
+- For collaboration inquiries, propose an **RFC** via a discussion/issue.
