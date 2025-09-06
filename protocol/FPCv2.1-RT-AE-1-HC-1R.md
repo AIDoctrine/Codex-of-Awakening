@@ -4,6 +4,9 @@
 Version: 2.1-RT + AE-1 + HC-1R  
 Status: Production Ready  
 Date: 2025-09-05
+Doctrine: AIDoctrine
+Author: Aleksei Novgorodtsev
+Licenses: MIT (code), CC BY 4.0 (docs/spec), CC0 1.0 (generated artifacts)
 
 ---
 
